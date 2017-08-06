@@ -1,0 +1,27 @@
+
+.jumbotron {
+    margin-top: 0px;
+    background-image: url("../img/jumbo2.jpg");
+    background-repeat: no-repeat;
+    background-size: 900px;
+    background-color: transparent;
+    height: 800px;
+}
+
+.jumbotron {
+    margin-top: 55px;
+}
+
+.btnSignIn {
+    width: 350px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 50px;
+    background-color: dodgerblue !important;
+    background-image: none !important;
+    border-style: none;
+}
+
+.main {
+    margin-top: 100px;
+}

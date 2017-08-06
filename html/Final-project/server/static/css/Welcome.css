@@ -1,0 +1,22 @@
+.navWelc {
+    display: inline-block;
+    color: dodgerblue;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.main-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.main-text {
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+    font-size: 30px;
+}
+
+.logout {
+    font-size: 20px;
+    margin-top: 25px;
+}
