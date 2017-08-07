@@ -2,7 +2,7 @@
 
 angular.module('base-auth.controllers')
 
-.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopup, AuthService, User, Storage){
+.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopup, $state, AuthService, User, Storage){
 
 	console.log('LoginCtrl');
 
@@ -10,7 +10,7 @@ angular.module('base-auth.controllers')
 
 	// Load the Login Modal
 	$ionicModal.fromTemplateUrl('templates/login-view.html', {
-		scope: $scope,
+		scope: $scope
 	}).then(function(modal) {
 		$scope.modal = modal;
 	});
@@ -34,7 +34,8 @@ angular.module('base-auth.controllers')
 			function(response) {
 				Storage.set('authToken', response.authToken);
 				AuthService.loginConfirmed();
-				$scope.modal.hide();
+                $state.go('get-started.user-created');
+                $scope.modal.hide();
 			},
 			function(err) {
 				$ionicPopup.alert({

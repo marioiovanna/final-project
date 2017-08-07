@@ -1,5 +1,4 @@
 // User Routes
-
 var path = require('path');
 var validator = require('validator');
 var User = require(path.resolve(__dirname, '../../models/user-model'));
@@ -8,7 +7,7 @@ var AuthToken = require(path.resolve(__dirname, '../../util/application-auth/aut
 
 exports.create = function(req, res) {
 
-	var name = req.body.name
+	var name = req.body.name;
   	var email = req.body.email;
     var password = req.body.password;
 
@@ -59,7 +58,7 @@ exports.login = function(req, res) {
     var password = req.body.password;
 
     if(!password || !email) {
-        return res.status(400).json({ message: "We need both an email and password." });
+        return res.status(400).json({ message: "We need both: email and password." });
     }
 
     email = email.toLowerCase();

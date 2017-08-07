@@ -1,5 +1,4 @@
 // Directives
-
 angular.module("base-auth.directives", [])
 
 .directive('login', function(){
@@ -8,7 +7,4 @@ angular.module("base-auth.directives", [])
     	restrict: 'E'
     	, controller: 'LoginCtrl'
     };
-
-})
-
-;
+});

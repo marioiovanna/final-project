@@ -1,5 +1,28 @@
-<ion-view class="maincon" title="E-Dreams">
-	<ion-content padding="true">
-		<a class="button" ui-sref="get-started.create-profile">Create Profile</a>
+<ion-modal-view>
+	<ion-header-bar>
+		<h1 class="title">Login</h1>
+	</ion-header-bar>
+
+	<ion-content>
+		<form ng-submit="login()">
+			<div class="list">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email</span>
+					<input type="email" placeholder="example@e-dreams.com" ng-model="loginForm.email">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Password</span>
+					<input type="password" placeholder="Enter your password." ng-model="loginForm.password">
+				</label>
+			</div>
+			<div class="padding">
+				<button type="submit" class="button button-block">Login</button>
+			</div>
+		</form>
+
+		<div class="padding">
+		<a class="button button-block" ui-sref="get-started.create-profile">Create Profile</a>
+		</div>
+
 	</ion-content>
-</ion-view>
+</ion-modal-view>
